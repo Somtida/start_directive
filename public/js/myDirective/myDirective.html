@@ -1,0 +1,26 @@
+<h1>Yay Directive! {{color}}</h1>
+
+  <input type="color" ng-model="color">
+
+<ul>
+  <li ng-repeat="name in list">{{name}}</li>
+</ul>
+
+<hr>
+<table class="table">
+  <thead>
+    <tr>
+      <!-- Object.keys(tacos[0]) -->
+      <th class="text-center sortable" ng-repeat="(key, value) in lists[0]"  ng-click="sortKey(key)">{{key}}
+        <span ng-if="key === sortOrder"> ⬆</span>
+        <span ng-if="'-'+key === sortOrder"> ⬇</span>
+      </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="taco in lists | orderBy: sortOrder track by $index">
+      <td ng-repeat="(key, value) in taco track by $index">{{value}}</td>
+    </tr>
+  </tbody>
+</table>

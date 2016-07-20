@@ -1,0 +1,25 @@
+body{
+  text-align: center;
+}
+.registerContainer{
+  margin: 0 auto;
+  width: 80%;
+}
+.profile-img{
+  width: 50%;
+}
+.loginContainer{
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #66ccff;
+  border-radius: 5px;
+}
+
+input{
+  margin-bottom: 10px;
+}
+.sortable{
+  cursor: pointer;
+}
