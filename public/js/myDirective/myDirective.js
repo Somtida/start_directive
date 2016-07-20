@@ -7,19 +7,18 @@ app.directive('myCustomForm', function(){
     restrict: 'E',
     scope: {
       fields: '<',
-      onSubmit: '&'
+      onSubmit: '='
     },
-    link: function(scope){
-      console.log('scope: ', scope);
-      scope.onSubmit()
-    },
-    controller: 'myCustomForm',
+    // controller: 'myCustomForm',
     templateUrl: '/html/myCustomForm.html'
   }
 })
 
 app.controller('myCustomForm', function($scope){
   console.log('$scope: ', $scope);
+  $scope.submit = (data) => {
+    console.log('submit ', data);
+  }
 })
 
 app.directive('myTextColor', function(){

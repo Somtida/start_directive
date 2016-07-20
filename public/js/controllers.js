@@ -25,20 +25,22 @@ app.controller('mainCtrl', function($scope, $state, User) {
     }
   ]
 
-  $scope.submit = () => {
-    console.log('submit!!');
+  $scope.submit = (data) => {
+    console.log('submit data: ', data);
   }
-  
+
+
+
   $scope.fields = [
     {
-      lable: 'Flavor',
-      model: 'iceCream.flavor',
+      label: 'Flavor',
+      model: 'flavor',
       type: 'text',
       required: true
     },
     {
-      lable: 'Price',
-      model: 'iceCream.price',
+      label: 'Price',
+      model: 'price',
       type: 'number',
       required: true
     }

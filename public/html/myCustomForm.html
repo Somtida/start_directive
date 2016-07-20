@@ -1,1 +1,12 @@
 <h1>custom form</h1>
+
+<form ng-submit='onSubmit(formData)'>
+  <div class="form-group" ng-repeat='field in fields'>
+    <lable class="control-label">{{field.label}}</lable>
+    <input type="{{field.type}}" ng-required='{{field.required}}' ng-model='formData["{{field.model}}"]'>
+  </div>
+
+
+  <!-- <input type="text" ng-model='formData.value'> -->
+  <button class="btn btn-info">Submit</button>
+</form>
