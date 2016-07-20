@@ -25,6 +25,25 @@ app.controller('mainCtrl', function($scope, $state, User) {
     }
   ]
 
+  $scope.submit = () => {
+    console.log('submit!!');
+  }
+  
+  $scope.fields = [
+    {
+      lable: 'Flavor',
+      model: 'iceCream.flavor',
+      type: 'text',
+      required: true
+    },
+    {
+      lable: 'Price',
+      model: 'iceCream.price',
+      type: 'number',
+      required: true
+    }
+  ]
+
   $scope.logout = () => {
     User.logout()
       .then(()=>{

@@ -20,7 +20,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="taco in lists | orderBy: sortOrder track by $index">
-      <td ng-repeat="(key, value) in taco track by $index">{{value}}</td>
+      <td ng-repeat="(key, value) in taco track by $index" my-draggable>{{value}}</td>
     </tr>
   </tbody>
 </table>
